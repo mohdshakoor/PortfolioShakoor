@@ -21,7 +21,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-800 text-white py-6 mt-10">
+    <footer className="bg-white text-white py-6 mt-10">
       <div className="container mx-auto px-4 text-center">
         {/* Logo */}
         <div className="mb-4 animate-fadeIn">
