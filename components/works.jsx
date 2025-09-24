@@ -21,7 +21,7 @@ export default function Projects() {
 
   return (
     <section
-      id="projects"
+      id="work"
       className="w-full px-6 sm:px-12 lg:px-20 py-20 bg-gradient-to-b from-gray-50 to-white"
     >
       {/* Section Header */}
