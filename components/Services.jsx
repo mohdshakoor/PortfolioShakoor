@@ -34,8 +34,8 @@ const Services = () => {
           My Services
         </h2>
         <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mt-5">
-          I am a frontend developer from California, USA with 10 years of experience
-          in multiple companies like Microsoft, Tesla, and Apple.
+          I am a Full Stack web developer from Lucknow India , with 1 years of  experience .
+           As a recent CSE student eager to learn, I love turning ideas into interactive experiences and am excited to grow as a full-stack developer.
         </p>
       </motion.div>
 
