@@ -1,18 +1,29 @@
 "use client";
 
-import { assets, infoList, toolsData } from '@/assets/assets';
-import Image from 'next/image';
-import React from 'react';
-import { motion } from 'framer-motion';
+import { assets, infoList, toolsData } from "@/assets/assets";
+import Image from "next/image";
+import React from "react";
+import { motion } from "framer-motion";
 
+// Animation variants
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: (i = 1) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: 0.15 * i, duration: 0.6, ease: 'easeOut' },
+    transition: { delay: 0.15 * i, duration: 0.6, ease: "easeOut" },
   }),
 };
+
+// Optional color variants for cards
+const cardColors = [
+  "from-pink-100 to-purple-100",
+  "from-yellow-100 to-orange-200",
+  "from-green-100 to-teal-200",
+  "from-blue-100 to-indigo-200",
+  "from-rose-100 to-pink-200",
+  "from-sky-100 to-blue-200",
+];
 
 const About = () => {
   return (
@@ -76,25 +87,44 @@ const About = () => {
             dynamic teams to deliver measurable impact.
           </motion.p>
 
-          {/* Info Cards */}
+          {/* Info Cards (Enhanced Version) */}
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-2xl">
-            {infoList.map(({ icon, title, description }, index) => (
-              <motion.li
-                key={index}
-                custom={index}
-                variants={fadeUp}
-                className="border border-gray-300 dark:border-gray-700 rounded-xl p-6 cursor-pointer 
-                           hover:scale-105 hover:shadow-xl transition-all duration-300 bg-white dark:bg-neutral-800"
-              >
-                <Image src={icon} alt={title} className="w-7 mt-2" />
-                <h3 className="my-4 font-semibold text-gray-800 dark:text-gray-100 text-lg">
-                  {title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm leading-snug">
-                  {description}
-                </p>
-              </motion.li>
-            ))}
+            {infoList.map(({ icon, title, description }, index) => {
+              const bgClass = cardColors[index % cardColors.length];
+
+              return (
+                <motion.li
+                  key={index}
+                  custom={index}
+                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    delay: 0.1 * index,
+                    duration: 0.6,
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 10,
+                  }}
+                  className={`
+                    group p-6 rounded-2xl border dark:border-gray-700 cursor-pointer
+                    bg-gradient-to-br ${bgClass} dark:from-neutral-800 dark:to-neutral-900
+                    shadow-md hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 ease-in-out
+                    hover:bg-gradient-to-br dark:hover:from-neutral-800 dark:hover:to-neutral-700
+                  `}
+                >
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white dark:bg-neutral-700 shadow-inner mb-4 transition-all duration-300 group-hover:rotate-[10deg]">
+                    <Image src={icon} alt={title} className="w-6 h-6 object-contain" />
+                  </div>
+                  <h3 className="font-semibold text-lg text-gray-800 dark:text-gray-100 mb-2">
+                    {title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-snug">
+                    {description}
+                  </p>
+                </motion.li>
+              );
+            })}
           </ul>
 
           {/* Tools */}
