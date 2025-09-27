@@ -69,7 +69,7 @@ const Header = () => {
         <motion.a
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          href="#contact"
+          href="#contactme"
           className="px-10 py-3 rounded-full bg-black text-white border border-white flex items-center gap-2 shadow-lg hover:bg-gray-900 transition-colors"
         >
           Contact Me
