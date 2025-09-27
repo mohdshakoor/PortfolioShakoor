@@ -23,7 +23,7 @@ export default function Projects() {
 
   return (
     <section
-      id="work"
+      id="mywork"
       className="relative w-full px-4 sm:px-8 lg:px-20 py-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden"
     >
       {/* Floating background animation */}

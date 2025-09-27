@@ -18,7 +18,7 @@ const fadeUp = {
 const About = () => {
   return (
     <section
-      id="about"
+      id="aboutme"
       className="w-full px-6 sm:px-10 lg:px-[12%] py-16 scroll-mt-20 bg-white dark:bg-neutral-900"
     >
       {/* Headings */}

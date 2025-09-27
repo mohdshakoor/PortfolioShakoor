@@ -40,7 +40,7 @@ const Contact = () => {
 
   return (
     <section
-      id="contact"
+      id="contactme"
       className="relative w-full min-h-screen py-16 px-4 sm:px-6 lg:px-12
                  flex flex-col items-center justify-center overflow-hidden"
     >
