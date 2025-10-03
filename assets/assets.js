@@ -98,7 +98,7 @@ export const serviceData = [
     { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
     { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
     { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Skilled in leveraging Python’s rich ecosystem (NumPy, Pandas, Scikit-learn, TensorFlow, PyTorch) to develop, train, and optimize machine learning models', link: '' },
+    { icon: assets.graphics_icon, title: 'Macine Learning', description: 'Skilled in leveraging Python’s rich ecosystem NumPy, Pandas, Scikit-learn to develop, train, and optimize machine learning models', link: '' },
 ]
 
 export const infoList = [
